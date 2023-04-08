@@ -43,4 +43,4 @@ client.on('messageCreate', (message) => {
 
 });
 
-client.login('MTA5NDA1NzcyODQ0NTUyNjAzNw.GnJUy2.IS2o_OzpcNqtGjuhM4l2Tm4MVPo_SQi933cMz8');
+client.login('YOUR DISCORD BOT TOKEN GOES HERE');
