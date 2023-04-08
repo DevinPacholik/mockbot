@@ -9,4 +9,4 @@ Mockbot comes with a few other commands like !larry and !trash to further mock u
 
 Mockbot runs on Node.js and Discord.js, so you will need to install those.
 
-The index.js file is the main code, and the .json files which are Node.js modules.
+The index.js file is the main code, and the .json files are Node.js modules.
