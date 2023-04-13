@@ -3,5 +3,6 @@ database_schema.js
 write_to_database.js
 
 database/
+node_modules/
 
 login-token.mjs
