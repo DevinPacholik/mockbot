@@ -1,0 +1,19 @@
+{
+  "name": "mockbot",
+  "version": "2.0.0",
+  "description": "mock your friends",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.2.0",
+    "mongoose": "^7.0.3"
+  }
+  
+  
+}
