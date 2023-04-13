@@ -1,5 +1,9 @@
 mockbot-functions/login-token.mjs
 
+database/database_schema.js
+database/database.js
+database/write-to-database.js
+
 node_modules/.package-lock.json
 node_modules/.bin/mime
 node_modules/.bin/mime.cmd
