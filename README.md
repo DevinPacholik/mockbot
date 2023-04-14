@@ -3,7 +3,7 @@ This is a Discord bot to mock your friends.
 
 The commands it has in this template include:
 ```
-!mock @username - Takes the last message a user sent and converts it to alternating uppercase and lowercase letters in a mocking fashion
+!mock @username - Takes the last message a user sent and converts it to alternating uppercase and lowercase letters
 
 !larry @username - Sends a photo of Larry the Cable Guy insisting something is funny
 
