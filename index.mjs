@@ -12,13 +12,24 @@ import { mock } from './mockbot-functions/mock.mjs';
 
 import { loginToken } from './mockbot-functions/login-token.mjs'
 
+//DB functions
+import { connect } from './database/database.mjs'
+import { saveMessageToDB } from './database/write_to_database.mjs';
+
+function startDBAfterDiscordBot(){
+  connect();
+};
+
+  //instert a valid discord bot token
+client.login(loginToken);
+
 client.once('ready', () => {
   console.log('Bot is ready!');
+  startDBAfterDiscordBot()
 });
 
 
   //find the message when the bot is summoned. It is listening for commands in the if statements below.
-
 client.on('messageCreate', (message) => {
 
   //mock 
@@ -31,8 +42,19 @@ client.on('messageCreate', (message) => {
   //help 
   mockHelp(message);
 
-});
-//instert a valid discord bot token
+  //write to DB
 
-client.login(loginToken);
+   // Ignore messages from bots and empty messages
+  if (message.author.bot || !message.content.trim()) {
+    console.log ('DB write error. Empty message or bot message.')
+    return; } 
+
+  else {saveMessageToDB(message.author.username, message); }
+    
+
+});
+
+
+
+
 
