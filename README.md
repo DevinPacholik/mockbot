@@ -4,8 +4,11 @@ This is a Discord bot to mock your friends.
 The commands it has in this template include:
 
 !mock @username - Takes the last message a user sent and converts it to alternating uppercase and lowercase letters in a mocking fashion
+
 !larry @username - Sends a photo of Larry the Cable Guy insisting something is funny
+
 !trash @username - Sends a photo of a trashcan at the user mentioned
+
 !mock-help - Lists all the mockbot commands
 
 This Discord bot built using Node.js and the Discord.js library. The bot is designed to respond to certain commands and messages within a Discord server, and can perform a variety of actions such as sending messages, posting images, and providing help.
