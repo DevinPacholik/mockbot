@@ -1,4 +1,5 @@
 mockbot-functions/login-token.mjs
+mockbot-functions/mimic.mjs
 
 database/database_schema.js
 database/database.js

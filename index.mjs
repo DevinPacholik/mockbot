@@ -6,7 +6,9 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 import { mockHelp } from './mockbot-functions/mock-help.mjs';
 import { trash } from './mockbot-functions/trash.mjs';
 import { larry } from './mockbot-functions/larry.mjs';
+import { mimic } from './mockbot-functions/mimic.mjs';
 import { mock } from './mockbot-functions/mock.mjs';
+
 
 //login token
 
@@ -35,6 +37,10 @@ client.on('messageCreate', (message) => {
   //mock 
   mock(message);
 
+  //mimic. This command relies on the use of a database. 
+  mimic(message);
+  console.log(message.guild.id);
+
   //image responses
   trash(message);
   larry(message);
@@ -44,12 +50,18 @@ client.on('messageCreate', (message) => {
 
   //write to DB
 
-   // Ignore messages from bots and empty messages
-  if (message.author.bot || !message.content.trim()) {
-    console.log ('DB write error. Empty message or bot message.')
-    return; } 
+  const urlRegex = /https?:\/\/\S+/gi;
 
-  else {saveMessageToDB(message.author.username, message); }
+// Define a regular expression to match the ignore phrases
+const ignoreRegex = /(!mock|!larry|!mimic|!trash|!mock-help)/;
+
+// Ignore messages from bots, empty messages, urls, and the ignore phrases
+if (message.author.bot || !message.content.trim() || urlRegex.test(message.content) || ignoreRegex.test(message.content)) {
+  console.log('DB write error. Empty message, URL, bot message, or commands to the bot.');
+  return;
+}
+
+  else {saveMessageToDB(message.author.username, message.content, message.guild.id); }
     
 
 });
