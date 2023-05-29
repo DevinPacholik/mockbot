@@ -3,11 +3,16 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 
 
 //imported functions
+import { chips } from './mockbot-functions/chips.mjs';
+import { badBone } from './mockbot-functions/badBone.mjs';
+import { boi } from './mockbot-functions/datBoi.mjs';
+import { bust } from './mockbot-functions/bust.mjs';
 import { mockHelp } from './mockbot-functions/mock-help.mjs';
 import { trash } from './mockbot-functions/trash.mjs';
 import { larry } from './mockbot-functions/larry.mjs';
 import { mimic } from './mockbot-functions/mimic.mjs';
 import { mock } from './mockbot-functions/mock.mjs';
+
 
 
 //login token
@@ -42,6 +47,10 @@ client.on('messageCreate', (message) => {
   console.log(message.guild.id);
 
   //image responses
+  badBone(message);
+  boi(message);
+  bust(message);
+  chips(message);
   trash(message);
   larry(message);
 
@@ -53,7 +62,7 @@ client.on('messageCreate', (message) => {
   const urlRegex = /https?:\/\/\S+/gi;
 
 // Define a regular expression to match the ignore phrases
-const ignoreRegex = /(!mock|!larry|!mimic|!trash|!mock-help)/;
+const ignoreRegex = /(!chips|!bad|!boi|!bust|!mock|!larry|!mimic|!trash|!mock-help)/;
 
 // Ignore messages from bots, empty messages, urls, and the ignore phrases
 if (message.author.bot || !message.content.trim() || urlRegex.test(message.content) || ignoreRegex.test(message.content)) {

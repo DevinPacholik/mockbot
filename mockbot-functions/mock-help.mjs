@@ -6,7 +6,7 @@
   
 
       if (command === '!mock-help') {
-    message.reply('```Fine, I GUESS I can help you... \n  !larry @username \n !mock @username \n !trash @username```');
+    message.reply('```Fine, I GUESS I can help you... \n  !chips! \n !larry @username \n !mock @username \n !trash @username \n !bad \n !boi \n !bust```');
   }
   }
 
