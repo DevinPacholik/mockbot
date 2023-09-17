@@ -32,12 +32,12 @@ client.login(loginToken);
 
 client.once('ready', () => {
   console.log('Bot is ready!');
+  client.user.setStatus('invisible')
   startDBAfterDiscordBot()
 });
-
-
   //find the message when the bot is summoned. It is listening for commands in the if statements below.
 client.on('messageCreate', (message) => {
+  
 
   //mock 
   mock(message);
