@@ -44,7 +44,7 @@ client.on('messageCreate', (message) => {
 
   //mimic. This command relies on the use of a database. 
   mimic(message);
-  console.log(message.guild.id);
+  console.log(message.guild.name);
 
   //image responses
   badBone(message);
@@ -70,7 +70,7 @@ if (message.author.bot || !message.content.trim() || urlRegex.test(message.conte
   return;
 }
 
-  else {saveMessageToDB(message.author.username, message.content, message.guild.id); }
+  else {saveMessageToDB(message.author.username, message.content, message.guild.name); }
     
 
 });
