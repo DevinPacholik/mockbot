@@ -44,7 +44,6 @@ client.on('messageCreate', (message) => {
 
   //mimic. This command relies on the use of a database. 
   mimic(message);
-  console.log(message.guild.name);
 
   //image responses
   badBone(message);
@@ -67,6 +66,7 @@ const ignoreRegex = /(!chips|!bad|!boi|!bust|!mock|!larry|!mimic|!trash|!mock-he
 // Ignore messages from bots, empty messages, urls, and the ignore phrases
 if (message.author.bot || !message.content.trim() || urlRegex.test(message.content) || ignoreRegex.test(message.content)) {
   console.log('DB write error. Empty message, URL, bot message, or commands to the bot.');
+  
   return;
 }
 
