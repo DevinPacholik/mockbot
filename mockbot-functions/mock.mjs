@@ -1,6 +1,6 @@
 export function mock(message){
     if (message.author.bot || !message.content.trim()) return; // Ignore messages from bots and empty messages
-console.log(`\nSent:\n${message.author.username}: ${message.content}\n${new Date().toString()}\n\n${message.guild.name}: ${message.channel.name}`);
+console.log(`\nSent:\n${message.author.username}: ${message.content}\n     ${new Date().toString()}\n     ${message.guild.name}: ${message.channel.name}`);
 
 const content = message.content.trim();
 const [command, target] = content.split(' ');
