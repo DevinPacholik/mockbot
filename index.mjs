@@ -12,7 +12,7 @@ import { trash } from './mockbot-functions/trash.mjs';
 import { larry } from './mockbot-functions/larry.mjs';
 import { mimic } from './mockbot-functions/mimic.mjs';
 import { mock } from './mockbot-functions/mock.mjs';
-
+import { stealth } from './mockbot-functions/stealth.mjs';
 
 
 //login token
